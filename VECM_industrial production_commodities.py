@@ -12,7 +12,7 @@ from statsmodels.tsa.vector_ar.vecm import VECM
 
 #Commodities data==============================================================
 #load data from excel file downloaded from IEA
-commodities = pd.read_excel('C:/Users/Zedric Cheung/Desktop/Towards Data Science/6_Regression for commodities/CMOHistoricalDataMonthly.xlsx', 'Monthly Prices')
+commodities = pd.read_excel('YOUR OWN DIRECTORY/CMOHistoricalDataMonthly.xlsx', 'Monthly Prices')
 commodities = commodities[3:]
 commodities.columns = commodities.iloc[0,:]
 commodities = commodities.drop(commodities.index[[0,1,2]])
@@ -28,7 +28,7 @@ commodities_energy_metal = commodities[['Crude oil, Brent', 'Coal, South African
 
 
 #Industrial Production data====================================================
-indust_prod = pd.read_excel('C:/Users/Zedric Cheung/Desktop/Towards Data Science/6_Regression for commodities/INDPRO.xls')
+indust_prod = pd.read_excel('YOUR OWN DIRECTORY/INDPRO.xls')
 indust_prod = indust_prod[10:]
 indust_prod = indust_prod.set_index(indust_prod.iloc[:,0], drop=True).drop(indust_prod.columns[0], axis=1)
 indust_prod = indust_prod.rename(columns={'Unnamed: 1': 'US Industrial Production Index'})
