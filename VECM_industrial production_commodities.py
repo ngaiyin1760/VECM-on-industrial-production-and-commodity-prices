@@ -125,7 +125,7 @@ for i in range(1, 7):
 #Vector error corretion model (VECM)===========================================
 # estimates the VECM on the closing prices with 6 lags, 1 cointegrating relationship, and
 # a constant within the cointegration relationship
-model_vecm = VECM(endog = df_selected, k_ar_diff = 6, coint_rank = 1, deterministic = 'aic')
+model_vecm = VECM(endog = df_selected, k_ar_diff = 6, coint_rank = 1, deterministic = 'ci')
 model_vecm_fit = model_vecm.fit()
 model_vecm_fit.summary()
 
