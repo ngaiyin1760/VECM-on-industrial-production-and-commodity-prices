@@ -89,7 +89,7 @@ for i in df_diff:
 # creates a list of tuples containing the permutations of length 2
 df_perms = list(permutations(df, 2))
 
-# loops through the list of stock permutations
+# loops through the list of permutations
 #for i in range(len(df_perms)):
 for i in range(8):
     temp_list = list(df_perms[i])
